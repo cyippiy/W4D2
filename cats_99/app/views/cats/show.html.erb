@@ -1,10 +1,36 @@
 <h1> CHECK OUT THIS DOPE CAT </h1>
 
-<ul>
-  <li><strong>Name:</strong> <%= @cats.name %></li>
-  <li><strong>Birth Date:</strong> <%= @cats.birth_date %></li>
-  <li><strong>Color:</strong> <%= @cats.color %></li>
-  <li><strong>Sex:</strong> <%= @cats.sex%></li>
-  <li><strong>Description:</strong> <%= @cats.description %></li>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"> <%= @cats.name %></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Birth Date:</td>
+        <td> <%= @cats.birth_date %></td>
+      </tr> 
+      <tr>
+        <td>Color:</td>
+        <td> <%= @cats.color %></td>
+      </tr> <tr>
+        <td>Sex:</td>
+        <td> <%= @cats.sex %></td>
+      </tr> <tr>
+        <td>Description:</td>
+        <td> <%= @cats.description %></td>
+      </tr> 
+    </tbody>
+  </table>
+  <form action= "<%= edit_cat_url(@cats) %>" method= "get">
+    <input type="submit" value="Edit Cat">
+  </form>
+<!-- <ul>
+  <li><strong>Name:</strong> <%#= @cats.name %></li>
+  <li><strong>Birth Date:</strong> <%#= @cats.birth_date %></li>
+  <li><strong>Color:</strong> <%#= @cats.color %></li>
+  <li><strong>Sex:</strong> <%#= @cats.sex%></li>
+  <li><strong>Description:</strong> <%#= @cats.description %></li>
   <br>
-</ul>
+</ul> -->
